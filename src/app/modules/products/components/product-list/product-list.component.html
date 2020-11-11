@@ -1,0 +1,42 @@
+<app-page-header title="Products List Page">
+  <a routerLink="create" role="button" class="btn btn-primary mb-2">
+    <fa-icon icon="plus"></fa-icon> ADD Product
+  </a>
+</app-page-header>
+
+<div class="app-product-list">
+  <div class="total-count">Total Count: {{totalCount}}</div>
+
+  <div class="table d-flex flex-column">
+    <div class="table-row table-head d-flex">
+      <div class="table-item flex-1">No</div>
+      <div class="table-item flex-1">Name</div>
+      <div class="table-item flex-1">Quantity</div>
+      <div class="table-item flex-1">Price</div>
+      <div class="table-item flex-1">Categories</div>
+      <div class="table-item flex-2">Action</div>
+    </div>
+
+    <div *ngIf="totalCount==0" class="empty-data">
+      No Products
+    </div>
+
+    <div class="table-row d-flex" *ngFor="let product of products; let i = index" >
+      <div class="table-item flex-1">{{i + 1}}</div>
+      <div class="table-item flex-1">{{product.name}}</div>
+      <div class="table-item flex-1">{{product.quantity}}</div>
+      <div class="table-item flex-1">${{product.price}}</div>
+      <div class="table-item flex-1">{{getProductCategories(product)}}</div>
+      <div class="table-item flex-2">
+        <div class="d-flex">
+          <button routerLink="{{product.id + '/edit'}}" class="btn d-flex mr-1 text-success icon-button">
+            <fa-icon icon="pencil-alt" [fixedWidth]="true" style="margin-right: 3px;"></fa-icon>Edit
+          </button>
+          <button class="btn d-flex text-danger icon-button" (click)="removeProduct(product.id)">
+            <fa-icon icon="trash-alt" [fixedWidth]="true" style="margin-right:  3px;"></fa-icon>Remove
+           </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

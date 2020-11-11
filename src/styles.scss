@@ -1,0 +1,378 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+  font-size: 14px;
+}
+
+body {
+  margin: 0 !important;
+  font-family: "Calibri";
+  font-weight: 300;
+  color: #282629;
+  line-height: 1.3;
+  //background-color: #f2f3f8;
+  background-color: #FEFEFE;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-content-stretch {
+  align-content: stretch;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.text-primary {
+  color: #004A99 !important;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.shadow-md {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.list-group-item {
+  cursor: pointer;
+}
+
+.list-group-item.active {
+  font-weight: bold;
+}
+
+.list-group-item.active::after {
+  color: transparent !important;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.badge-primary,
+.btn-primary,
+.progress-bar {
+  color: white !important;
+  background-color: #004A99;
+  border-color: #004A99;
+  text-decoration: none;
+}
+
+.badge-primary span,
+.btn-primary span,
+.progress-bar span {
+  color: white !important;
+}
+
+.badge-primary:hover,
+.btn-primary:hover,
+.progress-bar:hover {
+  background-color: #0063cc;
+  border-color: #0063cc;
+}
+
+.btn-outline-primary {
+  color: #004A99;
+  border-color: #004A99;
+}
+
+.btn-outline-primary:hover {
+  color: white;
+  background-color: #004A99;
+  border-color: #004A99;
+}
+
+.btn-outline-primary:active,
+.btn-outline-primary:active:hover,
+.btn-outline-primary:active:focus:hover {
+  background-color: #0063cc;
+  border-color: #0063cc;
+}
+
+.btn-primary.btn-invisible {
+  color: #004A99 !important;
+  background-color: transparent;
+  border-color: transparent;
+  /* padding: .375rem .4rem; */
+}
+
+.btn-primary.btn-invisible span {
+  color: #004A99 !important;
+}
+
+.btn-primary.btn-invisible:hover {
+  background-color: #004A99;
+  border-color: #004A99;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.btn-primary.btn-invisible:hover span {
+  color: white !important;
+}
+
+.btn {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  line-height: 1;
+  padding: .5rem .75rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  font-family: 'Calibri';
+
+  .form-label {
+    font-weight: 600;
+    margin-bottom: .5rem;
+    font-size: 18px;
+    display: inline-block;
+  }
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.75em + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.mr-0 {
+  margin-right: 0.5rem;
+}
+
+.text-danger {
+  color: #A12310 !important;
+}
+
+.text-success {
+  color: #1E7B34 !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+textarea{
+  .form-control {
+    height: auto;
+  }
+}
+.modal.show .modal-dialog {
+  margin-top: 5rem;
+  transform: none;
+}
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -50px);
+}
+.modal-dialog {
+  max-width: 500px;
+  margin: 1.75rem auto;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+}
+.d-block {
+  display: block !important;
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.fade {
+  transition: opacity 0.15s linear;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+
+  fa-icon {
+    margin: 15px auto;
+  }
+
+  h5 {
+    font-size: 1.75rem;
+    margin: 0;
+  }
+}
+
+.text-center {
+  text-align: center !important;
+}
+.w-100 {
+  width: 100% !important;
+}
+.modal-backdrop.show {
+  opacity: 0.5 !important;
+  z-index: 1050;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+
+.pl-5, .px-5 {
+  padding-left: 3rem !important;
+}
+.pr-5, .px-5 {
+  padding-right: 3rem !important;
+}
+.pb-4, .py-4 {
+  padding-bottom: 1.5rem !important;
+}
+.pt-4, .py-4 {
+  padding-top: 1.5rem !important;
+}
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+.lead {
+  line-height: 1.5rem;
+}
+.text-break {
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+}
+.mb-0, .my-0 {
+  margin-bottom: 0 !important;
+}
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.75rem;
+  border-top: 1px solid #dee2e6;
+  border-bottom-right-radius: calc(0.3rem - 1px);
+  border-bottom-left-radius: calc(0.3rem - 1px);
+}
+
+select.form-control[size], select.form-control[multiple] {
+  height: auto;
+}
+.input-group > .form-control, .input-group > .form-control-plaintext, .input-group > .custom-select, .input-group > .custom-file {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  margin-bottom: 0;
+}
+select {
+  word-wrap: normal;
+}
+button, select {
+  text-transform: none;
+}
+input, button, select, optgroup, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.ml-3 {
+  margin-left: 3rem;
+}
+
+.mr-3 {
+  margin-right: 3rem;
+}
+
+.mr-2 {
+  margin-right: 2rem;
+}

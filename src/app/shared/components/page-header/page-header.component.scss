@@ -1,0 +1,31 @@
+.app-page-header {
+  position: fixed;
+  top: 70px;
+  width: calc(100% - 1rem);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: #F8F9FA;
+
+  .content {
+    padding: 0 1rem;
+    min-height: 60px;
+    width: calc(100% - 260px - 2rem);
+
+    .date-wrapper {
+      padding-top: 20px;
+    }
+
+    .bottom {
+      margin: 15px 0 0;
+
+      .page-title {
+        h1 {
+          font-weight: 600;
+          margin: 0;
+          line-height: 2;
+        }
+      }
+      .page-header-content {
+      }
+    }
+  }
+}

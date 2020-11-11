@@ -1,0 +1,10 @@
+.content {
+  margin-left: 260px;
+  width: calc(100vw - 260px);
+
+  .main-content {
+    position: relative;
+    //height: calc(100vh - 70px);
+    margin-top: 70px;
+  }
+}

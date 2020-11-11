@@ -1,0 +1,38 @@
+<app-page-header title="Category List Page">
+  <a routerLink="create" role="button" class="btn btn-primary mb-2">
+    <fa-icon icon="plus"></fa-icon> ADD Category
+  </a>
+</app-page-header>
+
+<div class="app-category-list">
+  <div class="total-count">Total Count: {{totalCount}}</div>
+
+  <div class="table d-flex flex-column">
+    <div class="table-row table-head d-flex">
+      <div class="table-item flex-1">No</div>
+      <div class="table-item flex-1">Name</div>
+      <div class="table-item flex-1">Products Count</div>
+      <div class="table-item flex-2">Action</div>
+    </div>
+
+    <div *ngIf="totalCount==0" class="empty-data">
+      No Categories
+    </div>
+
+    <div class="table-row d-flex" *ngFor="let category of categories; let i = index" >
+      <div class="table-item flex-1">{{i + 1}}</div>
+      <div class="table-item flex-1">{{category.name}}</div>
+      <div class="table-item flex-1">{{category.productsCount}}</div>
+      <div class="table-item flex-2">
+        <div class="d-flex">
+          <button routerLink="{{category.id + '/edit'}}" class="btn d-flex mr-1 text-success icon-button">
+            <fa-icon icon="pencil-alt" [fixedWidth]="true" style="margin-right: 3px;"></fa-icon>Edit
+          </button>
+          <button class="btn d-flex text-danger icon-button" (click)="removeCategory(category.id)">
+            <fa-icon icon="trash-alt" [fixedWidth]="true" style="margin-right:  3px;"></fa-icon>Remove
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="modal-header flex-column">
+  <fa-icon [icon]="['fal','exclamation-triangle']" size="4x" style="margin: 15px auto;" class="text-danger"></fa-icon>
+  <h5 class="modal-title h3 text-center w-100" style="font-weight: 400;">{{ title }}</h5>
+</div>
+<div class="modal-body py-3 px-5">
+  <p class="lead text-danger text-center" [innerHTML]=message></p>
+</div>
+<div class="modal-footer d-flex justify-content-center">
+  <button *ngIf="errorType === 'delete'" type="button" class="btn btn-invisible btn-secondary mr-2"
+    (click)="activeModal.close('cancel')">
+    <fa-icon icon="ban" class="mr-1"></fa-icon>
+    Cancel
+  </button>
+  <button *ngIf="errorType === 'delete'" type="button" class="btn btn-danger"
+    (click)="activeModal.close('delete')">
+    <fa-icon [icon]="['fal','times']" class="mr-1"></fa-icon>
+    Delete
+  </button>
+</div>

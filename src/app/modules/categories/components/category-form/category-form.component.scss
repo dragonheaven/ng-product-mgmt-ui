@@ -1,0 +1,19 @@
+.category-form {
+  background-color: #FEFEFE;
+  width: calc(100% - 20px - 2rem);
+  margin-top: 180px;
+  padding: 1rem;
+
+  .form-wrapper {
+    max-width: 500px;
+    margin-top: 2rem;
+    margin-left: 1rem;
+
+    .save-button {
+      font-size: 18px;
+    }
+    .desc-control {
+      min-height: 80px;
+    }
+  }
+}

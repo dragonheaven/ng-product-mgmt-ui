@@ -1,0 +1,38 @@
+<app-page-header [title]="titleHeader">
+  <a [routerLink]="'/products'" role="button" class="btn btn-secondary btn-invisible btn-sm mt-2 pl-1 ml-n1">
+    <fa-icon icon="chevron-left" class="mr-1"></fa-icon>BACK
+  </a>
+</app-page-header>
+
+<div class="product-form">
+  <div class="form-wrapper">
+    <form [formGroup]="productEditForm">
+      <div class="form-group">
+        <label class="form-label required">Name</label>
+        <input type = "text" class="form-control" formControlName="name" />
+      </div>
+      <div class="form-group">
+        <label class="form-label required">Description</label>
+        <textarea type = "text" class="form-control desc-control" formControlName="description"  aria-multiline="true" rows="10"></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label required">Quantity</label>
+        <input type = "number" class="form-control" formControlName="quantity" />
+      </div>
+      <div class="form-group">
+        <label class="form-label required">Price</label>
+        <input type = "number" class="form-control" formControlName="price" />
+      </div>
+      <div class="form-group">
+        <select formControlName="categories" multiple class="form-control">
+          <option *ngFor="let x of categories" [value]="x.id" [innerHTML]="x.name"></option>
+        </select>
+      </div>
+      <div class="form-action-group">
+        <button class="btn btn-primary btn-lg save-button" (click)="submit()">
+          <fa-icon icon="save" class="mr-0"></fa-icon> SAVE
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
